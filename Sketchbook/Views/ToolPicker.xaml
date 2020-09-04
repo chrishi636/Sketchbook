@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Sketchbook.Views.ToolPicker">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label Text="Bindable Picker Demo" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Picker Title="Select a color" ItemsSource="{Binding DrawingTools}" SelectedItem="{Binding SelectedDrawingTool, Mode=TwoWay}" />
+            <BoxView Color="{Binding SelectedDrawingToolColor}" HeightRequest="200" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    
